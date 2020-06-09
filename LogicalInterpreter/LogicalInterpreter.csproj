@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{420082E0-B3C8-4B60-A738-BC2D54831224}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <RootNamespace>LogicalInterpreter</RootNamespace>
     <AssemblyName>LogicalInterpreter</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
@@ -32,8 +32,20 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AndExpression.cs" />
+    <Compile Include="Context.cs" />
+    <Compile Include="ConvertExpression.cs" />
+    <Compile Include="Expression.cs" />
+    <Compile Include="NotExpression.cs" />
+    <Compile Include="OrExpression.cs" />
+    <Compile Include="XorExpression.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
